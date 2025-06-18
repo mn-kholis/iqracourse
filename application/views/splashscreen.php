@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IQRA Course</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+      background-color: #4ba3a5;
+      position: relative;
+    }
+
+    .wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .top-skip {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+      color: #cfe4e5;
+      z-index: 2;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .center-content {
+      text-align: center;
+      color: white;
+      margin-top: 70px;
+      z-index: 2;
+    }
+
+    .title {
+      font-size: 36px;
+      font-family: 'League Spartan', sans-serif;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      color: #f6e26b;
+    }
+
+    .desc {
+      font-size: 12px;
+      margin-top: 10px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .bottom-buttons {
+      width: 100%;
+      max-width: 400px;
+      z-index: 2;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid white;
+      border-radius: 20px;
+      background-color: transparent;
+      color: white;
+      font-weight: bold;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .btn:hover {
+      background-color: white;
+      color: #4ba3a5;
+    }
+
+    .btn-primary {
+      background-color: white;
+      color: #4ba3a5;
+      border: none;
+    }
+
+    .background-image {
+      position: absolute;
+      bottom: 30%;
+      left: 0;
+      width: 100%;
+      z-index: 0;
+    }
+
+    .background-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      .center-content {
+        margin-top: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="top-skip">Lewati</div>
+
+  <div class="center-content">
+    <h1 class="title">IQRA'</h1>
+    <div class="subtitle">COURSE</div>
+    <p class="desc">iqra’ course solusi terbaik untuk kamu yang pengen bisa ngaji</p>
+  </div>
+
+  <div class="bottom-buttons">
+    <button class="btn">Daftar</button>
+    <button class="btn btn-primary">Login</button>
+  </div>
+</div>
+
+<div class="background-image">
+  <img src="<?= base_url('assets/gambarsplash.png') ?>" alt="Anak-anak">
+</div>
+
+</body>
+</html>
