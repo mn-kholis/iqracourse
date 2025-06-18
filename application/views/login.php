@@ -1,0 +1,182 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Masuk</title>
+
+  <!-- Roboto Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .wrapper {
+      width: 90%;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .top-skip {
+      position: fixed;
+      top: 10px;
+      right: 15px;
+      font-size: 14px;
+      z-index: 1000;
+    }
+
+    .top-skip a {
+      color: #4B9DA7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    form {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    input[type="email"] {
+      padding: 14px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    .password-container {
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .password-container input {
+      width: 100%;
+      padding: 14px;
+      padding-right: 45px; /* ruang untuk icon mata */
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    .password-container img {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    .forgot {
+      text-align: right;
+      font-size: 13px;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+
+    .forgot a {
+      color: red;
+      text-decoration: none;
+    }
+
+    button {
+      padding: 14px;
+      background-color: #4B9DA7;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .text-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .text-link a {
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 5px;
+    }
+
+    .policy {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 20px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    @media (min-width: 600px) {
+      body {
+        background: #f8f8f8;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-skip"><a href="">Lewati</a></div>
+
+  <div class="wrapper">
+    <form method="post" action="<?= site_url('login') ?>">
+      <input type="email" name="email" placeholder="Masukkan email Anda" required>
+
+      <!-- Kolom kata sandi dengan icon mata -->
+      <div class="password-container">
+        <input type="password" name="password" id="password" placeholder="Masukkan kata sandi" required>
+        <img src="<?= base_url('assets/mata.png') ?>" alt="toggle" onclick="togglePassword('password', this)">
+      </div>
+
+      <div class="forgot"><a href="#">Lupa Kata Sandi?</a></div>
+
+      <button type="submit">Masuk</button>
+
+      <div class="text-link">
+        Belum punya akun? <a href="<?= site_url('register') ?>">Daftar Disini</a>
+      </div>
+
+      <div class="policy">
+        Dengan melanjutkan, Anda dianggap telah menyetujui<br>
+        Kebijakan Privasi dan Ketentuan Pengguna.
+      </div>
+    </form>
+  </div>
+
+  <!-- Script toggle sandi -->
+  <script>
+    function togglePassword(id, icon) {
+      const field = document.getElementById(id);
+      if (field.type === "password") {
+        field.type = "text";
+        icon.style.opacity = 1;
+      } else {
+        field.type = "password";
+        icon.style.opacity = 0.7;
+      }
+    }
+  </script>
+</body>
+</html>
