@@ -169,7 +169,7 @@
         <a href="<?= base_url('Profile') ?>">
             <img src="<?= base_url('assets/vip.png') ?>" alt="VIP" title="VIP Access">
         </a>
-        <a href="<?= base_url('logout') ?>">
+        <a href="<?= base_url('Login/logout') ?>">
             <img src="<?= base_url('assets/logout.png') ?>" alt="Logout" title="Keluar">
         </a>
     </div>
@@ -187,7 +187,7 @@
         </div>
 
         <!-- Cards -->
-        <a href="<?= base_url('Halamaniqra') ?>" class="text-decoration-none">
+        <a href="<?= base_url('Menuiqra') ?>" class="text-decoration-none">
             <div class="learning-card mx-auto d-block mb-4">
                 <div class="card-content">
                     <div class="card-text">Belajar Membaca Iqra’</div>

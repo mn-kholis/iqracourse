@@ -80,7 +80,7 @@
     <div class="mobile-container">
         <header class="quiz-header">
             <span class="title"><?= htmlspecialchars($title) ?></span>
-            <a href="<?= site_url('iqra') ?>" class="close-btn"><i class="fas fa-times-circle"></i></a>
+            <a href="<?= site_url('Halamaniqra') ?>" class="close-btn"><i class="fas fa-times-circle"></i></a>
         </header>
 
         <main>
