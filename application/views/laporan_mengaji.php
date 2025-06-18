@@ -125,22 +125,22 @@
       <div class="card-content">
         <h4><?= $iqra['judul'] ?></h4>
         <div class="stage-bar">
-          <img src="<?= base_url('assets/icon_stage.jpg') ?>" alt="Stage"> 
+          <img src="<?= base_url('assets/icon_stage.png') ?>" alt="Stage"> 
           <span>Stage <?= $iqra['stage'] ?></span>
         </div>
-        <p><img src="<?= base_url('assets/icon_score.jpg') ?>" alt="Score"> Score: <?= $iqra['score'] ?></p>
-        <p><img src="<?= base_url('assets/icon_bintang.jpg') ?>" alt="Bintang"> Bintang: <?= $iqra['bintang'] ?></p>
-        <p><img src="<?= base_url('assets/icon_materi.jpg') ?>" alt="Materi"> Materi: <?= $iqra['materi'] ?></p>
+        <p><img src="<?= base_url('assets/icon_score.png') ?>" alt="Score"> Score: <?= $iqra['score'] ?></p>
+        <p><img src="<?= base_url('assets/icon_bintang.png') ?>" alt="Bintang"> Bintang: <?= $iqra['bintang'] ?></p>
+        <p><img src="<?= base_url('assets/icon_materi.png') ?>" alt="Materi"> Materi: <?= $iqra['materi'] ?></p>
       </div>
     </div>
   <?php endforeach; ?>
 </div>
 
 <div class="footer-nav">
-  <a href="#"><img src="<?= base_url('assets/icon_home.jpg') ?>" alt="Home">Home</a>
-  <a href="#"><img src="<?= base_url('assets/icon_laporan.jpg') ?>" alt="Laporan">Laporan</a>
-  <a href="#"><img src="<?= base_url('assets/icon_notifikasi.jpg') ?>" alt="Notifikasi">Notifikasi</a>
-  <a href="#"><img src="<?= base_url('assets/icon_akun.jpg') ?>" alt="Akun">Akun</a>
+  <a href="#"><img src="<?= base_url('assets/home.png') ?>" alt="Home">Home</a>
+  <a href="#"><img src="<?= base_url('assets/laporan.png') ?>" alt="Laporan">Laporan</a>
+  <a href="#"><img src="<?= base_url('assets/notifikasi.png') ?>" alt="Notifikasi">Notifikasi</a>
+  <a href="#"><img src="<?= base_url('assets/akun.png') ?>" alt="Akun">Akun</a>
 </div>
 
 </body>
