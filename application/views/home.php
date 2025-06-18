@@ -83,7 +83,7 @@
         }
 
         .bottom-nav a {
-            width: 25%; 
+            width: 25%;
             color: white;
             text-align: center;
             font-size: 0.8rem;
@@ -166,7 +166,7 @@
 
     <!-- Top-right Icons -->
     <div class="top-icons">
-        <a href="<?= base_url('vip') ?>">
+        <a href="<?= base_url('Profile') ?>">
             <img src="<?= base_url('assets/vip.png') ?>" alt="VIP" title="VIP Access">
         </a>
         <a href="<?= base_url('logout') ?>">
@@ -186,48 +186,53 @@
             </div>
         </div>
 
-        <!-- Option Cards -->
-        <div class="learning-card mx-auto d-block mb-4">
-            <div class="card-content">
-                <div class="card-text">Belajar Membaca Iqra’</div>
-                <img src="<?= base_url('assets/iqro.png') ?>" class="card-icon" alt="Iqro Icon">
+        <!-- Cards -->
+        <a href="<?= base_url('Halamaniqra') ?>" class="text-decoration-none">
+            <div class="learning-card mx-auto d-block mb-4">
+                <div class="card-content">
+                    <div class="card-text">Belajar Membaca Iqra’</div>
+                    <img src="<?= base_url('assets/iqro.png') ?>" class="card-icon" alt="Iqro Icon">
+                </div>
+                <div class="wave-shape"></div>
             </div>
-            <div class="wave-shape"></div>
-        </div>
-        <div class="learning-card">
-            <div class="card-content">
-                <div class="card-text">Belajar Nilai Islami</div>
-                <img src="<?= base_url('assets/nilaiislam.png') ?>" class="card-icon" alt="Nilai Islami">
+        </a>
+        <a href="<?= base_url('Halamaniqra') ?>" class="text-decoration-none">
+            <div class="learning-card">
+                <div class="card-content">
+                    <div class="card-text">Belajar Nilai Islami</div>
+                    <img src="<?= base_url('assets/nilaiislam.png') ?>" class="card-icon" alt="Nilai Islami">
+                </div>
+                <div class="wave-shape"></div>
             </div>
-            <div class="wave-shape"></div>
-        </div>
-        <div class="learning-card">
-            <div class="card-content">
-                <div class="card-text">Belajar Membaca Doa</div>
-                <img src="<?= base_url('assets/doa.png') ?>" class="card-icon" alt="Doa Icon">
+        </a>
+        <a href="<?= base_url('Halamaniqra') ?>" class="text-decoration-none">
+            <div class="learning-card">
+                <div class="card-content">
+                    <div class="card-text">Belajar Membaca Doa</div>
+                    <img src="<?= base_url('assets/doa.png') ?>" class="card-icon" alt="Doa Icon">
+                </div>
+                <div class="wave-shape"></div>
             </div>
-            <div class="wave-shape"></div>
-        </div>
-
+        </a>
     </div>
 
     <!-- Bottom Navigation -->
     <div class="bottom-nav">
-        <a href="#">
+        <a href="<?= base_url('Home') ?>">
             <img src="<?= base_url('assets/home.png') ?>" class="icon-img" />
             <span class="nav-label">Home</span>
         </a>
-        <a href="#">
+        <a href="<?= base_url('Laporanmengaji') ?>">
             <img src="<?= base_url('assets/laporan.png') ?>" class="icon-img" />
             <span class="nav-label">Laporan</span>
         </a>
-        <a href="#">
+        <a href="<?= base_url('Notifikasi') ?>">
             <img src="<?= base_url('assets/notifikasi.png') ?>" class="icon-img" />
             <span class="nav-label">Notifikasi</span>
         </a>
-        <a href="#">
+        <a href="<?= base_url('Profile') ?>">
             <img src="<?= base_url('assets/akun.png') ?>" class="icon-img" />
-            <span class="nav-label">Akun</span>
+            <span class="nav-label">Profile</span>
         </a>
     </div>
 
