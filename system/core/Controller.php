@@ -37,7 +37,6 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-#[\AllowDynamicProperties]
 /**
  * Application Controller Class
  *
@@ -50,6 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @author		EllisLab Dev Team
  * @link		https://codeigniter.com/userguide3/general/controllers.html
  */
+#[\AllowDynamicProperties]
 class CI_Controller {
 
 	/**
