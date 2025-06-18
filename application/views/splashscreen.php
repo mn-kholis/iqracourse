@@ -41,6 +41,17 @@
       color: #cfe4e5;
       z-index: 2;
       font-family: 'Roboto', sans-serif;
+      text-decoration: none;
+    }
+    .text {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 14px;
+      color: #cfe4e5;
+      z-index: 2;
+      font-family: 'Roboto', sans-serif;
+      text-decoration: none;
     }
 
     .center-content {
@@ -126,17 +137,17 @@
 <body>
 
 <div class="wrapper">
-  <div class="top-skip">Lewati</div>
+  <div class="top-skip"><a href="<?= site_url('Home') ?>" class="text">Lewati</a></div>
 
   <div class="center-content">
     <h1 class="title">IQRA'</h1>
     <div class="subtitle">COURSE</div>
-    <p class="desc">iqra’ course solusi terbaik untuk kamu yang pengen bisa ngaji</p>
+    <p class="desc">iqra’ course solusi terbaik untuk<br> kamu yang pengen bisa ngaji</p>
   </div>
 
   <div class="bottom-buttons">
-    <button class="btn">Daftar</button>
-    <button class="btn btn-primary">Login</button>
+    <a href="<?= site_url('Register') ?>"><button class="btn">Daftar</button></a>
+    <a href="<?= site_url('Login') ?>"><button class="btn btn-primary">Login</button></a>
   </div>
 </div>
 

@@ -134,7 +134,7 @@
 </head>
 <body>
 
-  <div class="top-skip"><a href="#">Lewati</a></div>
+  <div class="top-skip"><a href="<?= site_url('Home') ?>">Lewati</a></div>
 
   <div class="wrapper">
     <?php if ($this->session->flashdata('error')): ?>

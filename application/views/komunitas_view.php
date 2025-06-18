@@ -136,7 +136,7 @@
             <a href="#" class="nav-item"><i class="fas fa-user"></i><span>Profile</span></a>
             <a href="#" class="nav-item active"><i class="fas fa-users"></i><span>Komunitas</span></a>
             <a href="#" class="nav-item"><i class="fas fa-question-circle"></i><span>FAQ</span></a>
-            <a href="http://localhost/iqracourse/Hubungi" class="nav-item"><i class="fas fa-headset"></i><span>Hubungi Kami</span></a>
+            <a href="https://localhost/iqracourse/Hubungi" class="nav-item"><i class="fas fa-headset"></i><span>Hubungi Kami</span></a>
         </footer>
     </div>
 </body>
