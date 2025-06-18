@@ -7,7 +7,6 @@ class Laporanmengaji extends CI_Controller {
         $this->load->helper('url');
         $data['iqra_list'] = [
             [
-                'judul' => 'IQRA\' 1',
                 'stage' => '0/11',
                 'score' => 0,
                 'bintang' => 0,
@@ -15,7 +14,6 @@ class Laporanmengaji extends CI_Controller {
                 'gambar' => base_url('assets/laporaniqra1.png')
             ],
             [
-                'judul' => 'IQRA\' 2',
                 'stage' => '0/11',
                 'score' => 0,
                 'bintang' => 0,
@@ -23,7 +21,6 @@ class Laporanmengaji extends CI_Controller {
                 'gambar' => base_url('assets/laporaniqra2.png')
             ],
             [
-                'judul' => 'IQRA\' 3',
                 'stage' => '0/11',
                 'score' => 0,
                 'bintang' => 0,
@@ -31,7 +28,6 @@ class Laporanmengaji extends CI_Controller {
                 'gambar' => base_url('assets/laporaniqra3.png')
             ],
             [
-                'judul' => 'IQRA\' 4',
                 'stage' => '0/11',
                 'score' => 0,
                 'bintang' => 0,
