@@ -37,7 +37,7 @@
  * @filesource
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+#[\AllowDynamicProperties] 
 /**
  * Loader Class
  *
@@ -126,7 +126,19 @@ class CI_Loader {
 	);
 
 	// --------------------------------------------------------------------
-
+	public $load;
+    public $benchmark;
+    public $config;
+    public $log;
+    public $hooks;
+    public $utf8;
+    public $uri;
+    public $router;
+    public $exceptions;
+    public $output;
+    public $security;
+    public $input;
+    public $lang;
 	/**
 	 * Class constructor
 	 *
