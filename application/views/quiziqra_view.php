@@ -25,7 +25,13 @@
             display: flex; align-items: center; justify-content: center; /* Judul di tengah */
         }
         .quiz-header .title { font-weight: bold; font-size: 1.2rem; }
-        .quiz-header .close-btn { position: absolute; right: 15px; font-size: 1.5rem; color: white; text-decoration: none; }
+        .quiz-header .close-btn img {
+            width: 36px;
+            height: 36px;
+            display: block;
+            margin: 0 auto 4px;
+            position: absolute; right: 15px;top: 10px; font-size: 1.5rem; color: white; text-decoration: none;
+        }
         main { padding: 80px 20px 20px 20px; }
 
         .question-card {
@@ -80,7 +86,7 @@
     <div class="mobile-container">
         <header class="quiz-header">
             <span class="title"><?= htmlspecialchars($title) ?></span>
-            <a href="<?= site_url('Halamaniqra') ?>" class="close-btn"><i class="fas fa-times-circle"></i></a>
+            <a href="<?= site_url('Halamaniqra') ?>" class="close-btn"><img src="<?= base_url('assets/icon_silang.png') ?>" alt="close"></a>
         </header>
 
         <main>

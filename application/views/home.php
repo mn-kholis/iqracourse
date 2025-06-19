@@ -192,7 +192,7 @@
                 <div class="wave-shape"></div>
             </div>
         </a>
-        <a href="<?= base_url('Halamaniqra') ?>" class="text-decoration-none">
+        <a href="<?= base_url('Nilaiislami') ?>" class="text-decoration-none">
             <div class="learning-card">
                 <div class="card-content">
                     <div class="card-text">Belajar Nilai Islami</div>
@@ -201,7 +201,7 @@
                 <div class="wave-shape"></div>
             </div>
         </a>
-        <a href="<?= base_url('Halamaniqra') ?>" class="text-decoration-none">
+        <a href="<?= base_url('Doa') ?>" class="text-decoration-none">
             <div class="learning-card">
                 <div class="card-content">
                     <div class="card-text">Belajar Membaca Doa</div>

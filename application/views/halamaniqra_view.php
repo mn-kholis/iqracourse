@@ -14,7 +14,17 @@
         body { background-color: #e9ecef; font-family: 'Noto Naskh Arabic', sans-serif; }
         .mobile-container { max-width: 480px; margin: auto; background-color: #ffffff; min-height: 100vh; box-shadow: 0 0 10px rgba(0,0,0,0.1); position: relative; }
         .iqra-header { position: fixed; top: 0; width: 100%; max-width: 480px; z-index: 1000; background-color: #459a96; color: white; padding: 12px 15px; display: flex; align-items: center; justify-content: space-between; }
-        .iqra-header .header-btn { font-size: 1.5rem; color: white; text-decoration: none; }
+        .iqra-header .header-btn { 
+            font-size: 1.5rem; 
+            color: white; 
+            text-decoration: none; 
+        }
+        .iqra-header .header-btn img {
+            width: 36px;
+            height: 36px;
+            display: block;
+            margin: 0 auto 4px;
+        }
         .iqra-header .title { font-family: sans-serif; font-weight: bold; font-size: 1.2rem; }
         main { padding-top: 70px; padding-bottom: 70px; }
         .instruction-text { text-align: center; padding: 20px 15px; font-size: 1.1rem; font-weight: 600; color: #333; font-family: sans-serif; text-decoration:none;}
@@ -39,9 +49,9 @@
 <body>
     <div class="mobile-container">
         <header class="iqra-header">
-            <a href="<?= site_url('menuiqra') ?>" class="header-btn close-btn"><i class="fas fa-times-circle"></i></a>
+            <a href="<?= site_url('menuiqra') ?>" class="header-btn close-btn"><img src="<?= base_url('assets/icon_silang.png') ?>" alt="close"></a>
             <span class="title"><?= htmlspecialchars($title) ?></span>
-            <a href="<?= site_url('daftarisiiqra/index/1') ?>" class="header-btn menu-btn"><i class="fas fa-bars"></i></a>
+            <a href="<?= site_url('daftarisiiqra/index/1') ?>" class="header-btn menu-btn"><img src="<?= base_url('assets/hamburger.png') ?>" alt="Profile"></i></a>
         </header>
 
         <main>

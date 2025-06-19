@@ -6,7 +6,6 @@
     <title>Ubah Profil</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
-        /* Terapkan Roboto ke semua elemen */
         * {
             font-family: 'Roboto', sans-serif;
         }
@@ -60,9 +59,9 @@
         }
         
         main {
-            padding-top: 70px;  /* Disesuaikan dengan tinggi header baru */
+            padding-top: 70px;  
             padding-bottom: 133px;
-            background-color: #f0f2f5; /* Background area postingan */
+            background-color: #f0f2f5; 
         }
 
         .form-card {
@@ -220,7 +219,6 @@
 <script>
     function redirectProfile(event) {
         event.preventDefault();
-        // Proses penyimpanan bisa ditambahkan di sini (AJAX atau lainnya)
         window.location.href = "<?= site_url('profile') ?>";
     }
 </script>
