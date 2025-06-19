@@ -35,6 +35,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
     .close-btn {
         position: absolute;
@@ -95,7 +96,10 @@
 <div class="mobile-container">
     <header class="header">
         <span><?= htmlspecialchars($title) ?></span>
-        <a href="<?= site_url('home')?>" class="close-btn">&times;</a>
+         <a href="<?= site_url('home') ?>" class="close-btn">
+  <img src="<?= base_url('assets/icon_silang.png') ?>" alt="Tutup" style="width: 100%; height: 100%;">
+</a>
+
     </header>
 
     <main class="content-wrapper">

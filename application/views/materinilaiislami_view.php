@@ -30,7 +30,9 @@
     <div class="mobile-container">
         <header class="materi-header">
             <span class="title"><?= htmlspecialchars($title) ?></span>
-            <a href="#" onclick="window.history.back(); return false;" class="close-btn">&times;</a>
+            <a href="<?= site_url('home') ?>" class="close-btn">
+  <img src="<?= base_url('assets/icon_silang.png') ?>" alt="Tutup" style="width: 100%; height: 100%;">
+</a>
         </header>
 
         <main>

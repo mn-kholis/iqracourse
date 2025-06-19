@@ -31,7 +31,9 @@
 <div class="mobile-container">
     <header class="quiz-header">
         <span class="title"><?= htmlspecialchars($page_title) ?></span>
-        <a href="#" onclick="window.history.go(-2); return false;" class="close-btn">&times;</a>
+        <a href="<?= site_url('home') ?>" class="close-btn">
+  <img src="<?= base_url('assets/icon_silang.png') ?>" alt="Tutup" style="width: 100%; height: 100%;">
+</a>
     </header>
     <main>
         <h2 class="quiz-main-title">QUIS</h2>
