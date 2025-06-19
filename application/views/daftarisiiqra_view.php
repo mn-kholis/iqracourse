@@ -36,6 +36,12 @@
             display: flex; align-items: center; justify-content: center;
             cursor: pointer; text-decoration: none;
         }
+        .contents-header .close-btn img{
+            width: 36px;
+            height: 36px;
+            display: block;
+            margin: 0 auto 4px;
+        }
         .list-container {
             padding: 15px;
         }
@@ -66,7 +72,7 @@
     <div class="mobile-container">
         <header class="contents-header">
             <span class="title"><?= htmlspecialchars($title) ?></span>
-            <a href="#" class="close-btn" onclick="window.history.back(); return false;">&times;</a>
+            <a href="#" class="close-btn" onclick="window.history.back(); return false;"><img src="<?= base_url('assets/icon_silang.png') ?>" alt="close"></a>
         </header>
 
         <main class="list-container">

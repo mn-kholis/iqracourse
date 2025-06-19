@@ -40,6 +40,12 @@
       text-align: center;
       flex: 1;
     }
+    .header button img {
+            width: 36px;
+            height: 36px;
+            display: block;
+            margin: 0 auto 4px;
+        }
     main {
       padding-top: 60px; 
     }
@@ -124,7 +130,7 @@
 
   <div class="header">
     <h2>Belajar Membaca Iqra'</h2> 
-    <button class="close-btn" onclick="window.location.href='<?= site_url('Home') ?>'">&times;</button>
+    <button class="close-btn" onclick="window.location.href='<?= site_url('Home') ?>'"><img src="<?= base_url('assets/icon_silang.png') ?>" alt="close"></button>
   </div>
 
   <main>

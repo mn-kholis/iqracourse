@@ -122,7 +122,7 @@
 
 <!-- Header Sticky -->
 <div class="custom-header">
-  <a href="#" class="back-btn">
+  <a href="<?= site_url('Home') ?>" class="back-btn">
     <img src="<?= base_url('assets/kembali.png') ?>" alt="Kembali">
   </a>
   <h5>FAQ</h5>
