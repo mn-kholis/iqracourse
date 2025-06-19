@@ -9,7 +9,6 @@ class Chat extends CI_Controller {
         $this->load->helper('url');
     }
 
-    // Method untuk menampilkan chat dengan Customer Service
     public function cs()
     {
         $data['title'] = 'Customer Service';

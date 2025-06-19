@@ -9,32 +9,32 @@ class Menuiqra extends CI_Controller {
             [
                 'judul' => 'IQRA\' 1',
                 'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
-                'gambar' => base_url('assets/gambariqra1.jpg')
+                'gambar' => base_url('assets/gambariqra1.png')
             ],
             [
                 'judul' => 'IQRA\' 2',
                 'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
-                'gambar' => base_url('assets/gambariqra2.jpg')
+                'gambar' => base_url('assets/gambariqra2.png')
             ],
             [
                 'judul' => 'IQRA\' 3',
                 'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
-                'gambar' => base_url('assets/gambariqra3.jpg')
+                'gambar' => base_url('assets/gambariqra3.png')
             ],
             [
                 'judul' => 'IQRA\' 4',
                 'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
-                'gambar' => base_url('assets/gambariqra4.jpg')
+                'gambar' => base_url('assets/gambariqra4.png')
             ],
              [
                 'judul' => 'IQRA\' 5',
                 'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
-                'gambar' => base_url('assets/gambariqra1.jpg')
+                'gambar' => base_url('assets/gambariqra1.png')
             ],
              [
                 'judul' => 'IQRA\' 6',
                 'deskripsi' => 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
-                'gambar' => base_url('assets/gambariqra3.jpg')
+                'gambar' => base_url('assets/gambariqra3.png')
             ]
         ];
 

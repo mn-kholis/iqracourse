@@ -15,16 +15,19 @@ class Login extends CI_Controller {
         $this->load->view('login');
     }
 
-    public function submit() {
+    public function process() {
         $email = $this->input->post('email', TRUE);
         $password = $this->input->post('password', TRUE);
 
-        if ($email === 'admin@mail.com' && $password === 'admin123') {
-            $this->session->set_userdata('email', $email);
-            redirect('dashboard');
+        if (!empty($email) && !empty($password)) {
+            $this->session->set_userdata('user_logged_in', TRUE);
+            
+            $this->session->set_flashdata('login_success', 'Anda telah berhasil masuk.');
+
+            redirect('Login');
         } else {
-            $this->session->set_flashdata('error', 'Email atau password salah!');
-            redirect('login');
+            $this->session->set_flashdata('login_error', 'Mohon isi semua kolom!');
+            redirect('Login');
         }
     }
 

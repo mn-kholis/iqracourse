@@ -187,7 +187,7 @@
         </div>
 
         <!-- Cards -->
-        <a href="<?= base_url('Halamaniqra') ?>" class="text-decoration-none">
+        <a href="<?= base_url('Menuiqra') ?>" class="text-decoration-none">
             <div class="learning-card mx-auto d-block mb-4">
                 <div class="card-content">
                     <div class="card-text">Belajar Membaca Iqra’</div>
