@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Doa Interaktif</title>
+  <title>Quiz Doa Qunut</title>
 
-  <!-- Google Fonts Roboto -->
+  <!-- Font dan Bootstrap -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,7 +21,8 @@
       font-family: 'Roboto', sans-serif !important;
     }
 
-    .quiz-header {
+    /* Header sama seperti doa_qunut_view */
+    .custom-header {
       background-color: #4CA6AC;
       padding: 20px 20px;
       position: relative;
@@ -30,27 +31,30 @@
       align-items: center;
     }
 
-    .quiz-header h5 {
+    .custom-header h5 {
       color: white;
-      font-weight: bold;
+      font-weight: 700;
       margin: 0;
       font-size: 22px;
     }
 
-    .quiz-header .btn-close {
+    .btn-close-circle {
       position: absolute;
       top: 50%;
       right: 20px;
       transform: translateY(-50%);
-      padding: 0;
       width: 36px;
       height: 36px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    .quiz-header .btn-close img {
+    .btn-close-circle img {
       width: 36px;
       height: 36px;
     }
@@ -163,14 +167,14 @@
 <body>
 
   <!-- HEADER -->
-  <div class="quiz-header">
+  <div class="custom-header">
     <h5>Belajar Membaca Doa</h5>
-    <button class="btn-close" onclick="window.history.back()">
+    <button class="btn-close-circle" onclick="window.history.back();">
       <img src="<?= base_url('assets/silang.png') ?>" alt="Tutup">
     </button>
   </div>
 
-  <!-- KUIS -->
+  <!-- KONTEN QUIZ -->
   <div class="quiz-body">
     <div class="arabic-text">
       اللّهُمَّ اهْدِنِي فِيمَنْ هَدَيْتَ<br>
@@ -198,6 +202,7 @@
 
       const feedback = document.getElementById('feedback');
 
+      // Reset semua opsi
       document.querySelectorAll('.option').forEach(opt => {
         opt.classList.remove('incorrect');
       });
@@ -208,6 +213,7 @@
         feedback.className = "feedback correct";
         answeredCorrectly = true;
 
+        // Nonaktifkan semua klik
         document.querySelectorAll('.option').forEach(opt => {
           opt.onclick = null;
         });
@@ -221,7 +227,7 @@
     }
 
     function nextQuestion() {
-      window.location.href = "<?= base_url('Doa/hujan') ?>";
+      window.location.href = "<?= base_url('Doa/hujan') ?>"; // Ganti dengan halaman quiz berikutnya
     }
   </script>
 

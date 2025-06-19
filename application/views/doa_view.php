@@ -91,7 +91,7 @@
         <?php
         $daftar_doa_links = [
             ["text" => "Doa Qunut", "link" => "qunut"],
-            ["text" => "Doa ketika hujan turun", "link" => "ketika-hujan-turun"],
+            ["text" => "Doa ketika hujan turun", "link" => "hujan"],
             ["text" => "Doa sebelum makan", "link" => "sebelum-makan"],
             ["text" => "Doa setelah makan", "link" => "setelah-makan"],
             ["text" => "Doa sebelum wudhu", "link" => "sebelum-wudhu"],

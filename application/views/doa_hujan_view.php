@@ -103,9 +103,9 @@
 
   <div class="custom-header">
     <h5>Belajar Membaca Doa</h5>
-    <button class="btn-close-circle" onclick="window.history.back();">
+    <a class="btn-close-circle" href="<?= base_url('Doa') ?>">
       <img src="<?= base_url('assets/silang.png') ?>" alt="Tutup">
-    </button>
+</a>
   </div>
 
   <div class="container-doa p-4">

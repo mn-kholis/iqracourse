@@ -30,4 +30,5 @@ class Doa extends CI_Controller {
     {
         $this->load->view('doa_hujan_view');
     }
+
 }
