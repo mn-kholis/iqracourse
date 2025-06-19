@@ -165,7 +165,7 @@
         <div class="card centered">
             <h4>Berlangganan</h4>
             <p>Saat ini anda belum berlangganan</p>
-            <a href="<?= site_url('profile/berlangganan') ?>" class="btn btn-subscribe">Klik Untuk Berlangganan</a>
+            <a href="<?= site_url('Vip') ?>" class="btn btn-subscribe">Klik Untuk Berlangganan</a>
         </div>
     </div>
 
