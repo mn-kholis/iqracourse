@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IQRA Course</title>
   
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
@@ -18,12 +17,24 @@
     body, html {
       height: 100%;
       font-family: 'Roboto', sans-serif;
-      background-color: #4ba3a5;
-      position: relative;
+      /* Latar belakang body menjadi bingkai di desktop */
+      background-color: #333; 
+    }
+
+    /* [CSS BARU] Wadah utama yang mensimulasikan layar ponsel */
+    .mobile-container {
+        max-width: 420px; /* Lebar maksimal tampilan */
+        min-height: 100vh; /* Tinggi minimal satu layar penuh */
+        margin: auto; /* Otomatis di tengah secara horizontal */
+        position: relative; /* Penting untuk elemen absolute di dalamnya */
+        background-color: #4ba3a5; /* Warna utama dipindahkan ke sini */
+        overflow: hidden; /* Memotong elemen yang keluar dari wadah */
+        display: flex; /* Menggunakan flex untuk penataan */
+        flex-direction: column;
     }
 
     .wrapper {
-      min-height: 100vh;
+      flex: 1; /* Membuat wrapper mengisi ruang yang tersedia */
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -38,9 +49,12 @@
       top: 20px;
       right: 20px;
       font-size: 14px;
-      color: #cfe4e5;
       z-index: 2;
-      font-family: 'Roboto', sans-serif;
+      text-decoration: none;
+    }
+    .text {
+      text-decoration: none;
+      color: #cfe4e5;
     }
 
     .center-content {
@@ -67,7 +81,6 @@
     .desc {
       font-size: 12px;
       margin-top: 10px;
-      font-family: 'Roboto', sans-serif;
     }
 
     .bottom-buttons {
@@ -104,7 +117,7 @@
 
     .background-image {
       position: absolute;
-      bottom: 30%;
+      bottom: 25%; /* Posisi disesuaikan agar pas di dalam container */
       left: 0;
       width: 100%;
       z-index: 0;
@@ -115,33 +128,29 @@
       height: auto;
       display: block;
     }
-
-    @media (min-width: 768px) {
-      .center-content {
-        margin-top: 100px;
-      }
-    }
   </style>
 </head>
 <body>
 
-<div class="wrapper">
-  <div class="top-skip">Lewati</div>
+<div class="mobile-container">
+    <div class="wrapper">
+      <div class="top-skip"><a href="<?= site_url('Home') ?>" class="text">Lewati</a></div>
 
-  <div class="center-content">
-    <h1 class="title">IQRA'</h1>
-    <div class="subtitle">COURSE</div>
-    <p class="desc">iqra’ course solusi terbaik untuk kamu yang pengen bisa ngaji</p>
-  </div>
+      <div class="center-content">
+        <h1 class="title">IQRA'</h1>
+        <div class="subtitle">COURSE</div>
+        <p class="desc">iqra’ course solusi terbaik untuk<br> kamu yang pengen bisa ngaji!</p>
+      </div>
 
-  <div class="bottom-buttons">
-    <button class="btn">Daftar</button>
-    <button class="btn btn-primary">Login</button>
-  </div>
-</div>
+      <div class="bottom-buttons">
+        <a href="<?= site_url('Register') ?>"><button class="btn">Daftar</button></a>
+        <a href="<?= site_url('Login') ?>"><button class="btn btn-primary">Login</button></a>
+      </div>
+    </div>
 
-<div class="background-image">
-  <img src="<?= base_url('assets/gambarsplash.png') ?>" alt="Anak-anak">
+    <div class="background-image">
+      <img src="<?= base_url('assets/gambarsplash.png') ?>" alt="Anak-anak">
+    </div>
 </div>
 
 </body>

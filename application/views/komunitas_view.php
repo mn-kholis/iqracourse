@@ -22,7 +22,6 @@
             position: relative;
         }
 
-        /* --- BAGIAN HEADER YANG DIPERBAIKI --- */
         .header {
             position: fixed; 
             top: 0;
@@ -30,29 +29,29 @@
             max-width: 480px;
             z-index: 1000; 
             background-color: #ffffff;
-            padding: 12px 15px; /* Sedikit penyesuaian padding */
+            padding: 16px;
             border-bottom: 1px solid #ddd;
-            
-            /* Aturan Flexbox untuk mensejajarkan tombol dan judul */
-            display: flex;
             align-items: center;
+            text-align: center;
+            padding: 16px;
         }
-        
-        /* CSS KHUSUS UNTUK TOMBOL KEMBALI (BERSIH) */
-        .header .back-button {
-            font-size: 1.6rem; /* Sedikit diperbesar agar mudah diklik */
-            color: #0d6efd;
-            margin-right: 12px; /* Jarak antara tombol dan judul */
-            text-decoration: none;
-        }
-        
-        .header h5 {
+        .header .title {
             margin: 0;
-            font-size: 1.1rem; /* Ukuran font judul disesuaikan */
-            font-weight: 600; /* Font weight semi-bold */
+            font-size: 20px;
         }
-        /* CSS Sisa yang berpotensi konflik (header-action-button) TELAH DIHAPUS */
-        
+        .back-btn {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background-image: url('<?= base_url("assets/back.png") ?>');
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-indent: -9999px;
+            border: none;
+        }
         main {
             padding-top: 70px;  /* Disesuaikan dengan tinggi header baru */
             padding-bottom: 80px;
@@ -79,7 +78,7 @@
         .post-footer .more-options { margin-left: auto; color: #6c757d; }
 
         /* --- Footer Navigasi --- */
-        .footer-nav {
+        .footer {
             position: fixed;
             bottom: 0;
             left: 50%;
@@ -92,20 +91,37 @@
             justify-content: space-around;
             padding: 8px 0;
         }
-        .footer-nav .nav-item { text-align: center; color: #6c757d; font-size: 0.75rem; text-decoration: none; }
-        .footer-nav .nav-item i { font-size: 1.5rem; display: block; margin: 0 auto 5px; }
-        .footer-nav .nav-item.active { color: #0d6efd; }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffffff;
+            padding: 10px 0;
+            border-top: 1px solid #ccc;
+        }
+        .footer div {
+            text-align: center;
+            font-size: 12px;
+            color: #333;
+        }
+        .footer img {
+            width: 36px;
+            height: 36px;
+            display: block;
+            margin: 0 auto 4px;
+        }
+        .footer .active {
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            padding: 4px 8px;
+        }
     </style>
 </head>
 <body>
     <div class="mobile-container">
-        <header class="header">
-            
-            <a href="javascript:history.back()" class="back-button">
-                <i class="fas fa-arrow-left-circle"></i>
-            </a>
-            <h5>Komunitas Orang Tua Iqra' Course</h5>
-        </header>
+        <div class="header">
+            <a href="<?= base_url('Home') ?>"  class="back-btn">Kembali</a>
+            <h2 class="title">Komunitas</h2>
+        </div>
 
         <main>
             <?php if (!empty($posts)): ?>
@@ -132,12 +148,32 @@
             <?php endif; ?>
         </main>
 
-        <footer class="footer-nav">
-            <a href="#" class="nav-item"><i class="fas fa-user"></i><span>Profile</span></a>
-            <a href="#" class="nav-item active"><i class="fas fa-users"></i><span>Komunitas</span></a>
-            <a href="#" class="nav-item"><i class="fas fa-question-circle"></i><span>FAQ</span></a>
-            <a href="http://localhost/iqracourse/Hubungi" class="nav-item"><i class="fas fa-headset"></i><span>Hubungi Kami</span></a>
-        </footer>
+        <div class="footer">
+            <div>
+                <a href="<?= site_url('profile') ?>" style="text-decoration: none; color: #000;">
+                    <img src="<?= base_url('assets/profile.png') ?>" alt="Profile">
+                    <div><b>Profile</b></div>
+                </a>
+            </div>
+            <div class="active">
+                <a href="<?= site_url('komunitas') ?>" style="text-decoration: none; color: #000;">
+                    <img src="<?= base_url('assets/komunitas.png') ?>" alt="Komunitas">
+                    <div><b>Komunitas</b></div>
+                </a>
+            </div>
+            <div>
+                <a href="<?= site_url('faq') ?>" style="text-decoration: none; color: #000;">
+                    <img src="<?= base_url('assets/faq.png') ?>" alt="FAQ">
+                    <div><b>FAQ</b></div>
+                </a>
+            </div>
+            <div>
+                <a href="<?= site_url('hubungi') ?>" style="text-decoration: none; color: #000;">
+                    <img src="<?= base_url('assets/hubungi.png') ?>" alt="Hubungi Kami">
+                    <div><b>Hubungi Kami</b></div>
+                </a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
