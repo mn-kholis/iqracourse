@@ -5,7 +5,7 @@ class Komunitas extends CI_Controller {
 
     public function index()
     {
-        // Data ini bisa Anda ambil dari database nantinya
+        
         $data['posts'] = [
             [
                 'username' => 'User2009375',
@@ -65,7 +65,7 @@ class Komunitas extends CI_Controller {
             ],
         ];
 
-        // Memuat view dan mengirimkan data
+        
         $this->load->view('komunitas_view', $data);
     }
 }

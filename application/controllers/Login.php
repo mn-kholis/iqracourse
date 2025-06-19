@@ -5,9 +5,9 @@ class Login extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        // Memuat helper URL agar site_url() bisa digunakan di view
+        
         $this->load->helper('url');
-        // Optional: flashdata butuh session
+        
         $this->load->library('session');
     }
 
