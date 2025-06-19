@@ -113,7 +113,7 @@
     <div class="content">
 
       <!-- Link yang benar ke controller NilaiIslami/pilih -->
-      <a href="<?= site_url('nilaiislami/pilih'); ?>" class="card">
+      <a href="<?= site_url('nilaiislami/list'); ?>" class="card">
         <img src="<?= base_url('assets/adab.png') ?>" alt="Adab">
         <div class="card-title">Adab & Akhlak</div>
       </a>
