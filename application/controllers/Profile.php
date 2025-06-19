@@ -30,8 +30,4 @@ class Profile extends CI_Controller {
         $email = $this->input->post('email', TRUE);
         redirect('profile');
     }
-
-    public function berlangganan() {
-        $this->load->view('berlanggan'); 
-    }
 }

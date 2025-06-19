@@ -166,10 +166,10 @@
 
     <!-- Top-right Icons -->
     <div class="top-icons">
-        <a href="<?= base_url('Profile') ?>">
-            <img src="<?= base_url('assets/vip.png') ?>" alt="VIP" title="VIP Access">
+        <a href="<?= base_url('Vip') ?>">
+            <img src="<?= base_url('assets/vvip.png') ?>" alt="VIP" title="VIP Access">
         </a>
-        <a href="<?= base_url('logout') ?>">
+        <a href="<?= base_url('Login/logout') ?>">
             <img src="<?= base_url('assets/logout.png') ?>" alt="Logout" title="Keluar">
         </a>
     </div>
