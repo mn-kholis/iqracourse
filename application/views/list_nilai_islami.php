@@ -12,7 +12,7 @@
     }
 
     body {
-      font-family: sans-serif;
+      font-family: 'Roboto', sans-serif;
       background-color: #444;
       color: #000;
     }

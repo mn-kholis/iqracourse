@@ -126,11 +126,17 @@
         text-align: center; width: 90%; max-width: 320px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
-    .popup-box .icon {
-        font-size: 40px; color: #28a745; background-color: #e9f7ef;
-        width: 70px; height: 70px; border-radius: 50%;
-        margin: 0 auto 20px auto; display: flex;
-        justify-content: center; align-items: center;
+    .popup-box .icon img{
+      font-size: 40px;
+      color: #28a745;
+      background-color: #e9f7ef;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .popup-box h2 {
         color: #28a745; font-size: 1rem; font-weight: bold; margin: 0 0 5px 0;
@@ -181,7 +187,7 @@
 
   <div class="popup-overlay" id="registerSuccessPopup">
     <div class="popup-box">
-      <div class="icon"><i class="fas fa-check"></i></div>
+      <div class="icon"><img src="<?= base_url('assets/centang.png'); ?>" alt="centang"></i></div>
       <h2>Success</h2>
       <p>Pendaftaran Berhasil</p>
       <p class="sub-text">Silahkan Masuk ke Akun Anda</p>

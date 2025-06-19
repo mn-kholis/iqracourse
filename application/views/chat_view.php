@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
 
     <style>
-        body { background-color: #e9ecef; }
+        body { background-color: #e9ecef; 
+            font-family: 'Roboto', sans-serif;}
         .mobile-container {
             max-width: 480px; margin: auto; background-color: #ffffff; min-height: 100vh;
             box-shadow: 0 0 10px rgba(0,0,0,0.1); position: relative;

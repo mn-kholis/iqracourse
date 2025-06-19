@@ -5,13 +5,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Akses VIP - Iqra' Course</title>
-  <!-- Google Font Baloo -->
+
+  <!-- Font Awesome untuk ikon centang -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Baloo 2', cursive;
+      font-family: 'Roboto', sans-serif;
       background-color: #ffffff;
     }
 
@@ -115,6 +120,64 @@
       display: block;
     }
 
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .popup-box {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 280px;
+      width: 90%;
+    }
+
+    .popup-box .icon img{
+      font-size: 40px;
+        color: #28a745;
+        background-color: #e9f7ef;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 0 auto 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-box .success-title {
+      color: #28a745;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .popup-box .success-msg {
+      font-size: 14px;
+      color: #000;
+      margin: 8px 0 20px;
+    }
+
+    .popup-box .popup-button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
     @media (min-width: 600px) {
       .content {
         max-width: 400px;
@@ -134,7 +197,6 @@
   </div>
 
   <img class="wwave" src="<?= base_url('assets/wavw.png'); ?>" alt="Pembatas" />
-  </div>
 
   <!-- Content Section -->
   <div class="content">
@@ -152,13 +214,36 @@
       </div>
     </div>
 
-    <button class="subscribe-button">1 BULAN &nbsp;&nbsp; Rp25.000/bulan</button>
+    <button class="subscribe-button" onclick="showPopup()">1 BULAN &nbsp;&nbsp; Rp25.000/bulan</button>
 
     <div class="footer-links">
       <span>Perjanjian Pembaruan</span>
       <span>Kebijakan Privasi</span>
     </div>
   </div>
+
+  <!-- Pop-up Section -->
+  <div class="popup-overlay" id="successPopup">
+    <div class="popup-box">
+      <div class="icon">
+       <img src="<?= base_url('assets/centang.png'); ?>" alt="centang">
+      </div>
+      <div class="success-title">Success</div>
+      <div class="success-msg">Anda berhasil berlangganan</div>
+      <button class="popup-button" onclick="hidePopup()">Continue</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function showPopup() {
+      document.getElementById('successPopup').style.display = 'flex';
+    }
+
+    function hidePopup() {
+      document.getElementById('successPopup').style.display = 'none';
+    }
+  </script>
 </body>
 
 </html>

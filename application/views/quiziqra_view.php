@@ -13,7 +13,7 @@
     <style>
         body {
             background-color: #fceae1; /* Warna background peach */
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
         .mobile-container {
             max-width: 480px; margin: auto; background-color: #fceae1; min-height: 100vh;

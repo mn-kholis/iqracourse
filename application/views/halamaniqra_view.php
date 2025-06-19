@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        body { background-color: #e9ecef; font-family: 'Noto Naskh Arabic', sans-serif; }
+        body { background-color: #e9ecef; font-family: 'Roboto', sans-serif; }
         .mobile-container { max-width: 480px; margin: auto; background-color: #ffffff; min-height: 100vh; box-shadow: 0 0 10px rgba(0,0,0,0.1); position: relative; }
         .iqra-header { position: fixed; top: 0; width: 100%; max-width: 480px; z-index: 1000; background-color: #459a96; color: white; padding: 12px 15px; display: flex; align-items: center; justify-content: space-between; }
         .iqra-header .header-btn { 

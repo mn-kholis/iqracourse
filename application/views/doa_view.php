@@ -82,9 +82,9 @@
 
     <div class="custom-header">
         <h5>Belajar Membaca Doa</h5>
-        <button class="btn-close-circle" onclick="window.history.back();">
+        <a href="<?= site_url('home')?>" class="btn-close-circle">
             <img src="<?= base_url('assets/silang.png') ?>" alt="Tutup">
-        </button>
+        </a>
     </div>
 
     <div class="container py-3">
