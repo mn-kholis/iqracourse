@@ -143,10 +143,17 @@
       width: 90%;
     }
 
-    .popup-box .icon {
+    .popup-box .icon img{
       font-size: 40px;
-      color: #28a745;
-      margin-bottom: 12px;
+        color: #28a745;
+        background-color: #e9f7ef;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 0 auto 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .popup-box .success-title {

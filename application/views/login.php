@@ -49,12 +49,12 @@
         max-width: 320px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
-    .popup-box .icon {
-        font-size: 40px;
+    .popup-box .icon img{
+      font-size: 40px;
         color: #28a745;
         background-color: #e9f7ef;
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         margin: 0 auto 20px auto;
         display: flex;
@@ -111,7 +111,7 @@
   <div class="popup-overlay" id="successPopup">
     <div class="popup-box">
       <div class="icon">
-        <i class="fas fa-check"></i>
+        <img src="<?= base_url('assets/centang.png'); ?>" alt="centang">
       </div>
       <h2>Success</h2>
       <p>Login Berhasil</p>
