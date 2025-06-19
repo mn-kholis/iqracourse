@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Akses VIP - Iqra' Course</title>
+  <!-- Google Font Baloo -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
   <style>
     body {
@@ -33,13 +34,12 @@
 
     .top-section h1 {
       color: white;
-      font-size: 26px;
+      font-size: 22px;
       margin: 10px 0 0;
     }
 
     .top-section h1 span {
       color: #FFD700;
-      
     }
 
     .top-section .kids {
@@ -125,6 +125,7 @@
 </head>
 
 <body>
+  <!-- Top Section -->
   <div class="top-section">
     <img class="close-btn" src="<?= base_url('assets/icon_silang.png'); ?>" alt="Tutup"
       onclick="window.history.back();" />
@@ -135,6 +136,7 @@
   <img class="wwave" src="<?= base_url('assets/wavw.png'); ?>" alt="Pembatas" />
   </div>
 
+  <!-- Content Section -->
   <div class="content">
     <h2>AKSES VIP</h2>
     <p>Belajar Mengaji IQRA’<br />dan akses semua konten VIP</p>

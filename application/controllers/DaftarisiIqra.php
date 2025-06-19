@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-
+// NAMA CLASS DIUBAH
 class DaftarisiIqra extends CI_Controller {
 
     public function __construct()
@@ -42,7 +42,7 @@ class DaftarisiIqra extends CI_Controller {
                 break;
         }
 
-        
+        // NAMA VIEW YANG DIMUAT JUGA DIUBAH
         $this->load->view('daftarisiiqra_view', $data);
     }
 }

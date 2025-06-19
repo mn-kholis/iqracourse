@@ -4,10 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class KuisIslami extends CI_Controller {
 
     public function index($slug = null) {
-        if (!$slug) redirect('kuis_islami');
+        if (!$slug) redirect('nilaiislami');
 
         $data['slug'] = $slug;
-        $this->load->view('kuis_islami', $data);
+        $this->load->view('kuis_view', $data);
     }
 
     public function selesai($slug) {
