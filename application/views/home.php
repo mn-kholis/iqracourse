@@ -174,10 +174,7 @@
         </a>
     </div>
 
-    <!-- Main Content -->
     <div class="container mt-4 mb-5">
-
-        <!-- Logo, Title, Button -->
         <div class="d-flex align-items-center justify-content-center gap-3 mb-4 flex-wrap logo-header">
             <img src="<?= base_url('assets/logohome.png') ?>" class="logo-img" alt="Iqra Icon">
             <div class="text-start">
@@ -186,7 +183,6 @@
             </div>
         </div>
 
-        <!-- Cards -->
         <a href="<?= base_url('Menuiqra') ?>" class="text-decoration-none">
             <div class="learning-card mx-auto d-block mb-4">
                 <div class="card-content">
@@ -216,7 +212,6 @@
         </a>
     </div>
 
-    <!-- Bottom Navigation -->
     <div class="bottom-nav">
         <a href="<?= base_url('Home') ?>" class="active">
             <img src="<?= base_url('assets/home.png') ?>" class="icon-img" />
@@ -244,7 +239,7 @@
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.7);
-        display: none; /* Sembunyi secara default */
+        display: none; 
         justify-content: center;
         align-items: center;
         z-index: 9999;
