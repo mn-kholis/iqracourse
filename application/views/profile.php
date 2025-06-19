@@ -21,11 +21,17 @@
             flex-direction: column;
         }
         .header {
-            padding: 16px;
+            position: fixed; 
+            top: 0;
+            width: 100%;
+            max-width: 480px;
+            z-index: 1000; 
             background-color: #ffffff;
-            position: relative;
+            padding: 16px;
+            border-bottom: 1px solid #ddd;
+            align-items: center;
             text-align: center;
-            border-bottom: 1px solid #ccc;
+            padding: 16px;
         }
         .header .title {
             margin: 0;
@@ -47,6 +53,9 @@
         .content {
             padding: 16px;
             flex: 1;
+            padding-top: 70px;  /* Disesuaikan dengan tinggi header baru */
+            padding-bottom: 80px;
+            background-color: #f0f2f5; /* Background area postingan */
         }
         .card {
             background-color: #fefefe;
@@ -134,7 +143,7 @@
 <div class="container">
     <!-- Header -->
     <div class="header">
-        <a href="#" onclick="window.history.back();" class="back-btn">Kembali</a>
+        <a href="<?= base_url('Home') ?>"  class="back-btn">Kembali</a>
         <h2 class="title">Profile</h2>
     </div>
 
@@ -163,20 +172,28 @@
     <!-- Footer -->
     <div class="footer">
         <div class="active">
-            <img src="<?= base_url('assets/profile.png') ?>" alt="Profile">
-            <div><b>Profile</b></div>
+            <a href="<?= site_url('profile') ?>" style="text-decoration: none; color: #000;">
+                <img src="<?= base_url('assets/profile.png') ?>" alt="Profile">
+                <div><b>Profile</b></div>
+            </a>
         </div>
         <div>
-            <img src="<?= base_url('assets/komunitas.png') ?>" alt="Komunitas">
-            <div>Komunitas</div>
+            <a href="<?= site_url('komunitas') ?>" style="text-decoration: none; color: #000;">
+                <img src="<?= base_url('assets/komunitas.png') ?>" alt="Komunitas">
+                <div><b>Komunitas</b></div>
+            </a>
         </div>
         <div>
-            <img src="<?= base_url('assets/faq.png') ?>" alt="FAQ">
-            <div>FAQ</div>
+            <a href="<?= site_url('faq') ?>" style="text-decoration: none; color: #000;">
+                <img src="<?= base_url('assets/faq.png') ?>" alt="FAQ">
+                <div><b>FAQ</b></div>
+            </a>
         </div>
         <div>
-            <img src="<?= base_url('assets/hubungi.png') ?>" alt="Hubungi Kami">
-            <div>Hubungi Kami</div>
+            <a href="<?= site_url('hubungi') ?>" style="text-decoration: none; color: #000;">
+                <img src="<?= base_url('assets/hubungi.png') ?>" alt="Hubungi Kami">
+                <div><b>Hubungi Kami</b></div>
+            </a>
         </div>
     </div>
 </div>

@@ -19,19 +19,42 @@
         }
 
         /* --- HEADER --- */
-        .chat-header {
-            background-color: #ffffff; padding: 12px 15px; border-bottom: 1px solid #ddd;
-            display: flex; align-items: center; position: sticky; top: 0; z-index: 10;
+        
+        .header {
+            position: fixed; 
+            top: 0;
+            width: 100%;
+            max-width: 480px;
+            z-index: 1000; 
+            background-color: #ffffff;
+            padding: 16px;
+            border-bottom: 1px solid #ddd;
+            align-items: center;
+            text-align: center;
+            padding: 16px;
         }
-        .chat-header .back-button {
-            font-size: 1.6rem; color: #0d6efd; text-decoration: none; margin-right: 15px;
+        .header .title {
+            margin: 0;
+            font-size: 20px;
         }
-        .chat-header .title { font-weight: bold; font-size: 1.1rem; font-family: sans-serif; }
-
+        .back-btn {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background-image: url('<?= base_url("assets/back.png") ?>');
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-indent: -9999px;
+            border: none;
+        }
         /* --- AREA CHAT --- */
         .chat-area {
             flex-grow: 1; /* Membuat area chat mengisi sisa ruang */
             padding: 15px;
+            padding-top: 70px;
             background-color: #e9ecef;
             display: flex;
             flex-direction: column; /* Pesan akan tersusun dari atas ke bawah */
@@ -77,13 +100,11 @@
 </head>
 <body>
     <div class="mobile-container">
-        <header class="chat-header">
-            <a href="javascript:history.back()" class="back-button">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 16.5L4 12M4 12L8.5 7.5M4 12H14.5C17.5 12 20 9.5 20 6.5" stroke="#0D6EFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <span class="title"><?= htmlspecialchars($title) ?></span>
-        </header>
-
+        
+        <div class="header">
+            <a href="javascript:history.back()" class="back-btn">Kembali</a>
+            <h2 class="title"><span><?= htmlspecialchars($title) ?></span></h2>
+        </div>
         <main class="chat-area">
             <?php foreach ($messages as $msg): ?>
                 <div class="chat-bubble <?= $msg['sender'] ?>">
