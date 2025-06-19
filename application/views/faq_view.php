@@ -16,8 +16,8 @@
       background-color: #f2f2f2;
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      padding-top: 60px;  /* untuk header */
-      padding-bottom: 80px; /* untuk footer */
+      padding-top: 60px;  
+      padding-bottom: 80px;
     }
 
     /* HEADER */
@@ -42,7 +42,7 @@
     }
 
     .custom-header .back-btn img {
-      width: 28px; /* Ukuran icon kembali disesuaikan */
+      width: 28px; 
       height: 28px;
     }
 
