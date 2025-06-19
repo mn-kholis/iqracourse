@@ -11,27 +11,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* CSS dari sebelumnya tidak perlu diubah, jadi saya singkat di sini */
         body { background-color: #e9ecef; font-family: 'Noto Naskh Arabic', sans-serif; }
         .mobile-container { max-width: 480px; margin: auto; background-color: #ffffff; min-height: 100vh; box-shadow: 0 0 10px rgba(0,0,0,0.1); position: relative; }
         .iqra-header { position: fixed; top: 0; width: 100%; max-width: 480px; z-index: 1000; background-color: #459a96; color: white; padding: 12px 15px; display: flex; align-items: center; justify-content: space-between; }
         .iqra-header .header-btn { font-size: 1.5rem; color: white; text-decoration: none; }
         .iqra-header .title { font-family: sans-serif; font-weight: bold; font-size: 1.2rem; }
         main { padding-top: 70px; padding-bottom: 70px; }
-        .instruction-text { text-align: center; padding: 20px 15px; font-size: 1.1rem; font-weight: 600; color: #333; font-family: sans-serif; text-decoration-color: #0d6efd; text-decoration-thickness: 2px; }
+        .instruction-text { text-align: center; padding: 20px 15px; font-size: 1.1rem; font-weight: 600; color: #333; font-family: sans-serif; text-decoration:none;}
         .arabic-grid .row { border-bottom: 1px solid #f0f0f0; }
         .arabic-text-cell { display: flex; justify-content: center; align-items: center; padding: 15px 0; font-size: 2.8rem; font-weight: 700; color: #333; }
         .iqra-footer { position: fixed; bottom: 0; width: 100%; max-width: 480px; background-color: #ffffff; border-top: 1px solid #ddd; padding: 8px 20px; display: flex; align-items: center; justify-content: space-between; }
-        .iqra-footer .page-number { font-size: 1.5rem; font-weight: bold; color: #555; flex-grow: 1; text-align: center; }
-        .iqra-footer .next-btn { font-size: 2.2rem; color: #28a745; text-decoration: none; }
+        .iqra-footer .page-number { font-size: 1.5rem; font-weight: bold; color: #555; }
+        
+        /* CSS untuk tombol navigasi di footer */
+        .iqra-footer .nav-btn {
+            font-size: 2.2rem;
+            text-decoration: none;
+        }
+        .iqra-footer .next-btn {
+            color: #28a745;
+        }
+        .iqra-footer .prev-btn {
+            color: #28a745;
+        }
     </style>
 </head>
 <body>
     <div class="mobile-container">
         <header class="iqra-header">
-            <a href="#" class="header-btn menu-btn"><i class="fas fa-bars"></i></a>
+            <a href="<?= site_url('menuiqra') ?>" class="header-btn close-btn"><i class="fas fa-times-circle"></i></a>
             <span class="title"><?= htmlspecialchars($title) ?></span>
-            <a href="#" class="header-btn close-btn"><i class="fas fa-times-circle"></i></a>
+            <a href="<?= site_url('daftarisiiqra/index/1') ?>" class="header-btn menu-btn"><i class="fas fa-bars"></i></a>
         </header>
 
         <main>
@@ -58,9 +68,17 @@
         </main>
 
         <footer class="iqra-footer">
-            <span style="width: 35px;"></span> 
+
+            <a href="<?= $next_page_url ?>" class="nav-btn next-btn"><i class="fas fa-arrow-circle-right"></i></a>
+
             <span class="page-number"><?= $page_arabic ?></span>
-            <a href="<?= $next_page_url ?>" class="next-btn"><i class="fas fa-arrow-circle-right"></i></a>
+
+            <?php if (isset($prev_page_url) && $prev_page_url): ?>
+                <a href="<?= $prev_page_url ?>" class="nav-btn prev-btn"><i class="fas fa-arrow-circle-left"></i></a>
+            <?php else: ?>
+                <span style="width: 35.2px;"></span> 
+            <?php endif; ?>
+
         </footer>
     </div>
 </body>

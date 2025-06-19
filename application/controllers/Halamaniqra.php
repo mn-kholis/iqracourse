@@ -2,22 +2,28 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Halamaniqra extends CI_Controller {
+
     public function __construct()
-        {
-            parent::__construct();
-            // Pastikan URL helper sudah di-load (jika belum di-autoload)
-            $this->load->helper('url');
-        }
+    {
+        parent::__construct();
+        $this->load->helper('url');
+        // Pastikan Anda sudah meload library session jika belum di autoload
+        // $this->load->library('session');
+    }
+
     public function index($page_number = 1)
     {
         $data = [];
+        
+        // Logika untuk halaman sebelumnya
+        $data['prev_page_url'] = ($page_number > 1) ? site_url('Halamaniqra/index/' . ($page_number - 1)) : null;
 
         switch ($page_number) {
             case 1:
                 $data['title'] = "Iqra' 1";
                 $data['instruction'] = "Baca langsung A - Ba. Bacalah dengan suara pendek";
                 $data['page_arabic'] = "١";
-                $data['next_page_url'] = site_url('quiziqra/show/1');
+                $data['next_page_url'] = site_url('Quiziqra/show/1'); // Mengarah ke kuis
                 $data['grid_content'] = [
                     ['type' => 'full', 'content' => ['أَبَ']],
                     ['type' => 'half', 'content' => ['بَ أَبَ', 'أَبَ أَبَ']],
@@ -33,7 +39,7 @@ class Halamaniqra extends CI_Controller {
                 $data['title'] = "Iqra' 1";
                 $data['instruction'] = "Baca langsung Ba - Ta. Bacalah dengan suara pendek";
                 $data['page_arabic'] = "٢";
-                $data['next_page_url'] = site_url('Halamaniqra/index/1');
+                $data['next_page_url'] = site_url('Quiziqra/show/2'); // Mengarah ke kuis pelajaran 2
                 $data['grid_content'] = [
                     ['type' => 'full', 'content' => ['بَ تَ']],
                     ['type' => 'half', 'content' => ['أَ تَ بَ', 'تَ بَ أَ']],
@@ -46,10 +52,10 @@ class Halamaniqra extends CI_Controller {
                 break;
 
             default:
-                // Jika halaman tidak ditemukan, arahkan kembali ke halaman 1
                 redirect('Halamaniqra/index/1');
                 break;
         }
+
         $this->load->view('halamaniqra_view', $data);
     }
 }
