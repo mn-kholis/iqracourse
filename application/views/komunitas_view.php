@@ -11,6 +11,7 @@
         body {
             background-color: #f0f2f5; /* Sedikit penyesuaian warna background body */
             color: #1c1e21; /* Warna teks utama */
+            font-family: 'Roboto', sans-serif;
         }
 
         .mobile-container {
