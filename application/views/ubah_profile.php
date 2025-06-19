@@ -27,25 +27,42 @@
             justify-content: space-between;
         }
 
+        
         .header {
+            position: fixed; 
+            top: 0;
+            width: 100%;
+            max-width: 480px;
+            z-index: 1000; 
+            background-color: #ffffff;
             padding: 16px;
-            background-color: #fff;
-            display: flex;
+            border-bottom: 1px solid #ddd;
             align-items: center;
-            gap: 10px;
+            text-align: center;
+            padding: 16px;
         }
-
-        .header img.icon {
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-        }
-
-        .header h2 {
+        .header .title {
             margin: 0;
             font-size: 20px;
-            flex-grow: 1;
-            text-align: center;
+        }
+        .back-btn {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background-image: url('<?= base_url("assets/back.png") ?>');
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-indent: -9999px;
+            border: none;
+        }
+        
+        main {
+            padding-top: 70px;  /* Disesuaikan dengan tinggi header baru */
+            padding-bottom: 133px;
+            background-color: #f0f2f5; /* Background area postingan */
         }
 
         .form-card {
@@ -144,15 +161,10 @@
 <div class="container">
     <!-- Header -->
     <div class="header">
-        <a href="#" onclick="window.history.back();">
-            <img class="icon" src="<?= base_url('assets/back.png') ?>" alt="Back">
-        </a>
-        <h2>Ubah Profile</h2>
-        <a href="<?= site_url('profile') ?>">
-            <img class="icon" src="<?= base_url('assets/profile.png') ?>" alt="Profile Icon">
-        </a>
+        <a href="#" onclick="window.history.back();" class="back-btn">Kembali</a>
+        <h2 class="title">Ubah Profile</h2>
     </div>
-
+<main>
     <!-- Form -->
     <form class="form-card" onsubmit="redirectProfile(event)">
         <div class="profile-image"></div>
@@ -172,9 +184,9 @@
             <label>Password :</label>
             <input type="password" placeholder="Masukkan password email">
         </div>
-
         <button type="submit" class="save-btn">Simpan</button>
     </form>
+</main>
 
     <!-- Footer -->
     <div class="footer">
