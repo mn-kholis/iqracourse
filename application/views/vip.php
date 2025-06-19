@@ -133,7 +133,7 @@
     <img class="kids" src="<?= base_url('assets/logohome.png'); ?>" alt="Anak-anak belajar" />
   </div>
 
-  <img class="wwave" src="<?= base_url('assets/wwave.png'); ?>" alt="Pembatas" />
+  <img class="wwave" src="<?= base_url('assets/wavw.png'); ?>" alt="Pembatas" />
   </div>
 
   <!-- Content Section -->
