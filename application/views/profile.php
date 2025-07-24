@@ -110,6 +110,12 @@
             text-align: center;
         }
         .footer {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 480px;
             display: flex;
             justify-content: space-around;
             background-color: #ffffff;
@@ -185,7 +191,7 @@
             </a>
         </div>
         <div>
-            <a href="<?= site_url('faq') ?>" style="text-decoration: none; color: #000;">
+            <a href="<?= site_url('Faq') ?>" style="text-decoration: none; color: #000;">
                 <img src="<?= base_url('assets/faq.png') ?>" alt="FAQ">
                 <div><b>FAQ</b></div>
             </a>

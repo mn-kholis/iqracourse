@@ -151,10 +151,81 @@
             <span class="nav-label">Profile</span>
         </a>
     </div>
-
+<style>
+    .parental-gate-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: none; /* Sembunyi secara default */
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    .parental-gate-box {
+        background: white;
+        padding: 25px;
+        border-radius: 20px;
+        text-align: center;
+        width: 90%;
+        max-width: 350px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .parental-gate-box h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+    .parental-gate-box p {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 25px;
+    }
+    .question-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+    .answer-box {
+        width: 80px;
+        height: 60px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+    }
+    .options-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .option-btn {
+        background-color: #4ba3a5;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        padding: 15px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+</style>
     <div class="parental-gate-overlay" id="parentalGate">
-      <div class="parental-gate-box"> ... </div>
+    <div class="parental-gate-box">
+        <h2>KHUSUS ORANG TUA</h2>
+        <p>Jawablah pertanyaan berikut?</p>
+        <div class="question-container">
+            <span id="gate-question">5 + 8 =</span>
+            <div class="answer-box"></div>
+        </div>
+        <div class="options-grid" id="gate-options">
+            </div>
     </div>
+</div>
     
     <div class="popup-overlay" id="logoutPopup">
         <div class="popup-box">
@@ -169,14 +240,75 @@
 
 
     <script>
-        /* SCRIPT UNTUK PARENTAL GATE (TIDAK BERUBAH) */
-        const gateOverlay = document.getElementById('parentalGate');
-        // ... (semua script parental gate Anda tetap di sini)
-        function showParentalGate(event) {
-          event.preventDefault();
-          // ...
+        // Ambil elemen-elemen dari DOM
+    const gateOverlay = document.getElementById('parentalGate');
+    const questionEl = document.getElementById('gate-question');
+    const optionsEl = document.getElementById('gate-options');
+
+    let correctAnswer;
+    const profileUrl = '<?= site_url('Profile') ?>';
+
+    // Fungsi untuk membuat dan menampilkan soal baru
+    function generateQuestion() {
+        // Buat 2 angka acak antara 1 dan 10
+        const num1 = Math.floor(Math.random() * 10) + 1;
+        const num2 = Math.floor(Math.random() * 10) + 1;
+        correctAnswer = num1 + num2;
+
+        // Tampilkan soal di layar
+        questionEl.textContent = `${num1} + ${num2} =`;
+
+        // Siapkan array untuk pilihan jawaban
+        let options = [correctAnswer];
+
+        // Buat 5 pilihan jawaban salah yang unik
+        while (options.length < 6) {
+            let wrongAnswer = correctAnswer + (Math.floor(Math.random() * 10) - 5);
+            // Pastikan jawaban salah tidak sama dengan jawaban benar dan tidak negatif
+            if (wrongAnswer !== correctAnswer && wrongAnswer >= 0 && !options.includes(wrongAnswer)) {
+                options.push(wrongAnswer);
+            }
         }
-        // ... dst.
+
+        // Acak urutan pilihan jawaban
+        options.sort(() => Math.random() - 0.5);
+
+        // Hapus pilihan jawaban lama dan buat yang baru
+        optionsEl.innerHTML = '';
+        options.forEach(option => {
+            const button = document.createElement('button');
+            button.className = 'option-btn';
+            button.textContent = option;
+            button.onclick = () => handleAnswerClick(option);
+            optionsEl.appendChild(button);
+        });
+    }
+
+    // Fungsi yang dijalankan saat pilihan jawaban diklik
+    function handleAnswerClick(selectedAnswer) {
+        if (selectedAnswer === correctAnswer) {
+            // Jika jawaban benar, arahkan ke halaman Profile
+            window.location.href = profileUrl;
+        } else {
+            // Jika jawaban salah, buat soal baru
+            alert('Jawaban salah, silakan coba lagi!');
+            generateQuestion();
+        }
+    }
+
+    // Fungsi utama untuk menampilkan pop-up
+    function showParentalGate(event) {
+        event.preventDefault(); // Mencegah link default berjalan
+        generateQuestion(); // Buat soal pertama
+        gateOverlay.style.display = 'flex'; // Tampilkan pop-up
+    }
+
+    // Event listener untuk menutup pop-up jika mengklik area gelap di luar kotak
+    gateOverlay.addEventListener('click', function(event) {
+        if (event.target === gateOverlay) {
+            gateOverlay.style.display = 'none';
+        }
+    });
     
         /* [JAVASCRIPT BARU] UNTUK POP-UP LOGOUT */
         const logoutPopup = document.getElementById('logoutPopup');

@@ -51,7 +51,7 @@
         <header class="iqra-header">
             <a href="<?= site_url('menuiqra') ?>" class="header-btn close-btn"><img src="<?= base_url('assets/icon_silang.png') ?>" alt="close"></a>
             <span class="title"><?= htmlspecialchars($title) ?></span>
-            <a href="<?= site_url('daftarisiiqra/index/1') ?>" class="header-btn menu-btn"><img src="<?= base_url('assets/hamburger.png') ?>" alt="Profile"></i></a>
+            <a href="<?= site_url('DaftarisiIqra/index/1') ?>" class="header-btn menu-btn"><img src="<?= base_url('assets/hamburger.png') ?>" alt="Profile"></i></a>
         </header>
 
         <main>

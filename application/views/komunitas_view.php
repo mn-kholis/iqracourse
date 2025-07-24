@@ -38,7 +38,8 @@
         }
         .header .title {
             margin: 0;
-            font-size: 20px;
+            font-weight: bold;
+            font-size: 18px;
         }
         .back-btn {
             position: absolute;
@@ -163,7 +164,7 @@
                 </a>
             </div>
             <div>
-                <a href="<?= site_url('faq') ?>" style="text-decoration: none; color: #000;">
+                <a href="<?= site_url('Faq') ?>" style="text-decoration: none; color: #000;">
                     <img src="<?= base_url('assets/faq.png') ?>" alt="FAQ">
                     <div><b>FAQ</b></div>
                 </a>

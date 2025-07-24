@@ -14,17 +14,17 @@
         .quiz-header .title { font-weight: 700; font-size: 1.2rem; }
         .quiz-header .close-btn { position: absolute; right: 15px; background-color: #e74c3c; color: white; border-radius: 50%; width: 32px; height: 32px; border: none; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none; }
         main { padding: 25px 20px; text-align: center; }
-        .quiz-main-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 0; }
+        .quiz-main-title { font-size: 1.5rem; font-weight: 500; margin-bottom: 0; }
         .quiz-sub-title { font-size: 0.9rem; color: #555; border-bottom: 2px solid #ddd; padding-bottom: 15px; margin-bottom: 20px; }
-        .question-text { font-size: 1.1rem; font-weight: 700; margin-bottom: 25px; }
+        .question-text { font-size: 1.1rem; font-weight: 500; margin-bottom: 25px; }
         .answer-options { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
-        .answer-btn { background-color: #f8f9fa; border: 2px solid #e9ecef; border-radius: 25px; padding: 12px 20px; width: 100%; text-align: left; font-weight: 500; cursor: pointer; transition: all 0.2s ease; }
+        .answer-btn { background-color: #f8f9fa; border: 2px solid #e9ecef; border-radius: 15px; padding: 12px 20px; width: 100%; text-align: left; font-weight: 500; cursor: pointer; transition: all 0.2s ease; }
         .answer-btn.selected.correct { border-color: #198754; background-color: #d1e7dd; }
         .answer-btn.selected.incorrect { border-color: #dc3545; background-color: #f8d7da; }
         .feedback-box { display: none; padding: 10px; border-radius: 10px; font-weight: 500; margin-bottom: 15px; }
         .feedback-box.correct { background-color: #d1e7dd; color: #0f5132; }
         .explanation-box { display: none; background-color: #fff3cd; color: #664d03; border-radius: 12px; padding: 15px; text-align: left; font-size: 0.9rem; margin-bottom: 20px; }
-        #lanjut-btn { display: none; width: 100%; background-color: white; color: #333; font-weight: 700; padding: 15px; border-radius: 25px; border: 1px solid #ccc; text-decoration: none; font-size: 1.1rem; }
+        #lanjut-btn { display: none; width: 100%; background-color: white; color: #333; font-weight: 700; padding: 15px; border-radius: 15px; border: 1px solid #ccc; text-decoration: none; font-size: 1.1rem; }
     </style>
 </head>
 <body>
@@ -42,7 +42,7 @@
         <div class="answer-options" id="answer-options">
             <?php foreach ($options as $key => $value): ?>
                 <button class="answer-btn" data-option="<?= $key ?>">
-                    <b><?= $key ?>.</b> <?= htmlspecialchars($value) ?>
+                    <?= $key ?>. <?= htmlspecialchars($value) ?>
                 </button>
             <?php endforeach; ?>
         </div>

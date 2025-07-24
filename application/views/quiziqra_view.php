@@ -58,7 +58,7 @@
             display: flex; align-items: center; width: 100%;
             background-color: white; border: 2px solid transparent; border-radius: 15px;
             padding: 15px; margin-bottom: 15px; text-align: left;
-            font-weight: 600; cursor: pointer; transition: all 0.2s;
+            font-weight: 500; cursor: pointer; transition: all 0.2s;
         }
         .answer-btn:hover { background-color: #f8f9fa; }
         .answer-btn .option-letter {
@@ -76,7 +76,8 @@
 
         #lanjut-btn {
             display: none; /* Sembunyi secara default */
-            width: 100%; background-color: #0d6efd; color: white;
+            width: 100%; background-color: #ffffff; color: black;
+            text-decoration: none;
             font-weight: bold; padding: 15px; border-radius: 15px;
             border: none; margin-top: 20px;
         }
@@ -104,7 +105,7 @@
                 <?php endforeach; ?>
             </div>
 
-            <a href="<?= $next_lesson_url ?>"><button id="lanjut-btn">
+            <a href="<?= $next_lesson_url ?>" style="text-decoration: none;"><button id="lanjut-btn">
                 Lanjut
             </button></a>
         </main>

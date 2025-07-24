@@ -85,7 +85,7 @@
     .option {
       background-color: white;
       border: 2px solid #ffffff;
-      border-radius: 10px;
+      border-radius: 15px;
       padding: 10px 15px;
       margin-bottom: 12px;
       cursor: pointer;
@@ -159,7 +159,7 @@
       padding: 12px;
       margin-top: 20px;
       font-weight: bold;
-      border-radius: 8px;
+      border-radius: 15px;
       display: none;
     }
   </style>
