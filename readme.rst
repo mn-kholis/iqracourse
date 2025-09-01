@@ -6,7 +6,6 @@ Learning the Qur'an for early childhood is often a challenge for parents. The ba
 
 *******************
 Group Member
-*******************
 
 1. Muhammad Nurkholis 22.12.2541  
 2. Tia Puspita Sari 22.12.2481  
