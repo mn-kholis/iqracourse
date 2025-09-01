@@ -8,11 +8,11 @@ Learning the Qur'an for early childhood is often a challenge for parents. The ba
 Group Member
 *******************
 
-Muhammad Nurkholis 22.12.2541
-Tia Puspita Sari 22.12.2481
-Ervin Reka Abadi 22.12.2526
-Fadhila Asla Shana 22.12.2538
-Renita Tri Hastuti 22.12.2476
+1. Muhammad Nurkholis 22.12.2541  
+2. Tia Puspita Sari 22.12.2481  
+3. Ervin Reka Abadi 22.12.2526  
+4. Fadhila Asla Shana 22.12.2538  
+5. Renita Tri Hastuti 22.12.2476  
 
 **************************
 Prototype UI/UX
